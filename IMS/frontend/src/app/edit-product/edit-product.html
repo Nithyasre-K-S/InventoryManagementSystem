@@ -1,0 +1,28 @@
+<div class="edit-container">
+
+  <h2>Edit Product</h2>
+
+  <form [formGroup]="editForm" (ngSubmit)="onUpdate()">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+
+    <label>Brand</label>
+    <input type="text" formControlName="brand">
+
+    <label>Size</label>
+    <input type="text" formControlName="size">
+
+    <label>Price</label>
+    <input type="number" formControlName="price">
+
+    <label>Quantity</label>
+    <input type="number" formControlName="quantity">
+
+    <button type="submit">Update</button>
+    <button type="button" routerLink="/product">Back</button>
+
+  </form>
+
+</div>
+``

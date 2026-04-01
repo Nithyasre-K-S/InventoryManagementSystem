@@ -1,0 +1,42 @@
+.product-container {
+  margin: 20px auto;
+  width: 900px;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-bar input {
+  width: 40%;
+  padding: 8px;
+}
+
+.header-bar select {
+  padding: 8px;
+}
+
+.add-btn {
+  padding: 8px 15px;
+  background: #43a047;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;   
+}
+
+table th, table td, table tr {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  margin-right: 6px;
+}

@@ -1,0 +1,63 @@
+.login-container {
+  width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+h2 {
+  text-align: center;
+}
+
+input, select {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 12px;
+   box-sizing: border-box;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+.register-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-section a {
+  color: #1976d2;
+  cursor: pointer;
+  font-weight: 500;
+}
+a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  color: #1976d2;
+  text-decoration: underline;
+  display: inline-block;
+  z-index: 9999;
+}
+.register-section {
+  position: relative;
+  z-index: 999;
+}
+.nav-link {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: underline;
+  pointer-events: auto !important;
+  z-index: 9999;
+}

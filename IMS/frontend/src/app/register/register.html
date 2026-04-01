@@ -1,0 +1,85 @@
+<div class="register-container">
+  <h2>User Registration</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+    
+    <label>Full Name</label>
+      <input type="text"
+       formControlName="fullName"
+       placeholder="Enter full name">
+
+<p class="error"
+   *ngIf="field('fullName').invalid && (field('fullName').dirty || field('fullName').touched)">
+   * Only characters and spaces allowed
+</p>
+
+
+    <label>Mobile Number</label>
+    <input type="text"
+       formControlName="mobileNumber"
+       placeholder="10-digit number">
+
+<p class="error"
+   *ngIf="field('mobileNumber').invalid && (field('mobileNumber').dirty || field('mobileNumber').touched)">
+   * Enter a valid 10-digit mobile number
+</p>
+
+
+  <label>Email</label>
+  <input type="email"
+       formControlName="email"
+       placeholder="Enter email">
+
+<p class="error"
+   *ngIf="field('email').invalid && (field('email').dirty || field('email').touched)">
+   * Enter a valid email address
+</p>
+
+
+   <label>Username</label>
+   <input type="text"
+       formControlName="userName"
+       placeholder="Choose username">
+
+<p class="error"
+   *ngIf="field('userName').invalid && (field('userName').dirty || field('userName').touched)">
+   * Username is required
+</p>
+
+
+   <label>Password</label>
+   <input type="password"
+       formControlName="password"
+       placeholder="Enter strong password">
+
+<p class="error"
+   *ngIf="field('password').invalid && (field('password').dirty || field('password').touched)">
+   * Password must include uppercase, lowercase, number and special character
+</p>
+
+   <label>User Role</label>
+  <select formControlName="userRole">
+    <option value="">-- Select Role --</option>
+    <option value="ADMIN">Admin</option>
+    <option value="USER">User</option>
+  </select>
+
+<p class="error"
+   *ngIf="field('userRole').invalid && (field('userRole').dirty || field('userRole').touched)">
+   * Please select a role
+</p>
+    <p class="error"
+       *ngIf="field('userRole').dirty && field('userRole').invalid">
+      * User Role is required
+    </p>
+    <button type="submit">Register</button>
+
+  </form>
+  
+<div class="login-link">
+  <label>Already have an account?</label>
+  <a routerLink="/login">Login here</a>
+</div>
+
+</div>

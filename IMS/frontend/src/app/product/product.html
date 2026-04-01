@@ -1,0 +1,49 @@
+<div class="product-container">
+
+  <div class="header-bar">
+    <input type="text" placeholder="Search product..."
+           [(ngModel)]="searchText"
+           (input)="onSearch()">
+
+    <select [(ngModel)]="sortKey" (change)="onSortChange()">
+      <option value="id">Sort by ID</option>
+      <option value="name">Sort by Name</option>
+      <option value="price">Sort by Price</option>
+      <option value="quantity">Sort by Quantity</option>
+    </select>
+
+    <button class="add-btn"  routerLink="/product/add" >Add Product</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of filteredProducts">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.brand }}</td>
+        <td>{{ p.size }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.quantity }}</td>
+        <td>
+        
+          <button (click)="editProduct(p.id)">Edit</button>
+          <button (click)="deleteProduct(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>

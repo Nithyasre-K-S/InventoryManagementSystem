@@ -1,0 +1,36 @@
+<div class="login-container">
+  <h2>Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <label>Username</label>
+    <input type="text" formControlName="username" placeholder="Enter username">
+
+    <label>Password</label>
+    <input type="password" formControlName="password" placeholder="Enter password">
+    <br>
+
+    <label>User Role</label>
+    <select formControlName="userRole">
+      <option value="">-- Select Role --</option>
+      <option value="ADMIN">Admin</option>
+      <option value="USER">User</option>
+    </select>
+
+    <button type="submit">Login</button>
+    
+    <br>
+    <br>
+
+
+  </form>
+  
+
+  
+<div class="register-section">
+  <label>No account?</label>
+  <a routerLink="/register" class="nav-link">Register here</a>
+</div>
+
+
+</div>

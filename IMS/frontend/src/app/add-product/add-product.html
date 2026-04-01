@@ -1,0 +1,42 @@
+<div class="add-container">
+
+  <h2>Add New Product</h2>
+
+  <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+
+    <label>Name</label>
+    <input type="text" formControlName="name" placeholder="Enter product name">
+    <p class="error" *ngIf="addProductForm.get('name')?.invalid && addProductForm.get('name')?.touched">
+      * Name is required
+    </p>
+
+    <label>Brand</label>
+    <input type="text" formControlName="brand" placeholder="Enter brand">
+    <p class="error" *ngIf="addProductForm.get('brand')?.invalid && addProductForm.get('brand')?.touched">
+      * Brand is required
+    </p>
+
+    <label>Size</label>
+    <input type="text" formControlName="size" placeholder="Enter size">
+    <p class="error" *ngIf="addProductForm.get('size')?.invalid && addProductForm.get('size')?.touched">
+      * Size is required
+    </p>
+
+    <label>Price</label>
+    <input type="number" formControlName="price" placeholder="Enter price">
+    <p class="error" *ngIf="addProductForm.get('price')?.invalid && addProductForm.get('price')?.touched">
+      * Price must be greater than 0
+    </p>
+
+    <label>Quantity</label>
+    <input type="number" formControlName="quantity" placeholder="Enter quantity">
+    <p class="error" *ngIf="addProductForm.get('quantity')?.invalid && addProductForm.get('quantity')?.touched">
+      * Quantity must be greater than 0
+    </p>
+
+    <button type="submit">Add Product</button>
+    <button routerLink="/product" type="button" class="back-btn">Back</button>
+
+  </form>
+
+</div>
